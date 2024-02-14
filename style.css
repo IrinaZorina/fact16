@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+.container {
+    width: 1364px;
+    margin: 0 auto;   
+}
+.header {
+    background-color: black;
+    height: 100px;
+}
+.header-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+h1 {
+    color: white;
+}
+.main-wrapper {
+    
+}
+.main-content {
+    margin-top: 20px;
+}
+
+.img__block {
+    width: 300px;
+    height: 400px;
+    
+}
+img {
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: 2px 3px 12px black;
+    height: 100%;
+    
+}
+.main-description {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main-content h1 {
+    color: black;
+    text-align: center;
+}
+.hobby {
+    height: 200px;
+    margin: 0 10px 0;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 2px 3px 12px lightgray;
+    padding: 15px 15px 15px;
+    width: 400px;
+    font-size: 25px;
+   
+
+}
+.rewiew {
+    height: 200px;
+    margin: 0 10px 0;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 2px 3px 10px lightgray;
+    padding: 15px 15px 15px;
+    width: 400px;
+    font-size: 25px;
+}
+
+.footer{
+    margin: 30vh 0 0;
+    background-color: black;
+    height: 300px;
+}
+.footer__wrapper {
+    padding: 20px 0 0 ;
+} 
+.img-contact__block .img-contact {
+    width: 200px;
+    height: 200px;
+}
+
+.contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+}
