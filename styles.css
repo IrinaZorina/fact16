@@ -1,0 +1,341 @@
+
+@media screen and (max-width: 380px) {
+    
+        .myTravels{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid black;
+            padding: 1px;
+            text-align: center;
+        
+                    
+        } 
+ 
+        .nav{
+
+            display: flex;
+            flex-direction: column;
+            
+        }
+
+        .fio{
+            display: flex;
+            flex-direction: column;
+            
+        
+        
+        }
+
+        .initials{
+            
+            font-size: 16px;
+        
+            
+            }
+
+
+            .profile {
+
+                display: flex;
+                flex-direction: column;
+                
+                
+                } 
+
+
+                .bitrix-logo{
+                display: none;
+
+                }
+
+                .profile-photo{
+
+                    width: 260px;
+                   
+                }
+
+                
+             
+                    
+                                      
+                
+                    
+                                      
+  }
+    
+   
+    
+
+
+     
+
+
+
+
+
+p, figure{
+
+margin: 0;
+
+}
+
+
+.header {
+    
+    height: 120px;
+    background-color: azure;
+    border: 4px solid #A63600;
+   
+   
+    
+}
+
+.nav{
+
+    display: flex;
+    align-items: center; 
+    justify-content: space-between;
+    
+    
+}
+
+
+.wrapper{
+ margin: 0 auto;
+
+}
+
+.fio{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 4px solid #A63600;
+    border-top:none;
+
+
+}
+
+
+
+.initials{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    margin: 0 auto;
+    
+    }
+
+.profile {
+
+display: flex;
+justify-content: space-evenly;
+align-items: center;
+border: 4px solid #A63600;
+border-top:none;
+
+
+} 
+
+.info,
+.courses{
+ 
+    line-height: 1.8;
+    padding: 3px;
+
+}   
+
+
+   
+.myTravels{
+    display: flex;
+    justify-content: space-around;
+    background-color: azure;
+    border: 6px solid lightslategray;
+    margin: 10px auto;
+
+   
+
+}
+
+.journey{
+    
+    text-align: center;
+    border: 3px solid rgb(83, 83, 84);
+    box-sizing: border-box;
+    padding: 5px;
+    margin: 10px;
+      
+}
+
+.myTravels-flex{
+
+    justify-content: center;
+}
+
+
+.container{
+
+display: flex;
+flex-direction: column;
+
+
+
+}
+
+/* .journey-khanty{
+
+    grid-area: x;
+}
+
+
+.journey-kirov{
+
+    grid-area: k;   
+}
+
+.journey-barnaul{
+
+    grid-area: b;
+
+}
+
+.journey-ekat{
+
+    grid-area: e;
+
+} */
+
+
+
+
+.bitrix-logo{
+    width: 100px;
+    min-height: 100px;
+    padding: 9px;
+    
+        }
+
+
+
+.boxlink{
+
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    background-color: azure;
+    }
+
+
+figcaption{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 16px;
+    font-weight: 700;
+    
+
+}
+
+
+
+
+
+
+.vodorod{
+background-color: aquamarine;
+display: grid;
+margin: 10px;
+border: 2px solid black;
+width: 200px;
+height: 200px;
+box-sizing: border-box;
+
+grid-template-rows: 2fr 1fr 1fr;
+grid-template-columns: 1fr 1fr;
+
+}
+
+
+.element{
+
+    width: 70px;
+    height: 70px;
+    box-sizing: content-box;
+    margin:1px;
+    padding:5px;
+    font-size: 80px;
+    display: inline-block;
+   
+}
+.thin{
+
+font-size: 18px;
+font-weight: 200;
+font-style: italic;
+margin: 1px;
+padding: 5px;
+
+}
+
+
+.bold{
+
+    margin: 1px;
+    padding:5px;
+    font-size: 22px;
+     font-weight: 900;
+    }
+    
+   .footer{
+display: flex;
+z-index:4;
+background-color: rgb(62, 56, 233);
+opacity: 0.6;
+
+
+   } 
+
+ .footer-wrapper{
+margin: 0 auto;
+display: flex;
+z-index:3;
+padding:50px;
+
+ }  
+
+
+ .contact{
+
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+color: rgb(10, 10, 10);
+font-size: 24px;
+font-weight: 800;
+
+ }
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

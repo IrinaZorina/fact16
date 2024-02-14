@@ -1,0 +1,31 @@
+
+
+.box-image{
+
+            width: 100px;
+        height: 100px;
+        background-color: antiquewhite;
+        object-fit:fill;
+     
+}
+
+table,td,tr{
+    border-collapse: collapse;
+    border: 1px solid grey;
+
+
+}
+
+body{
+margin: 200px;
+display: flex;
+flex-direction: row;
+justify-content: center;
+
+}
+
+.box-titan{
+object-fit:cover;
+
+
+}
