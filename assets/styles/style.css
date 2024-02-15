@@ -1,0 +1,199 @@
+/* Profile style START */
+html, body  {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    width: 100%;
+    height: auto;
+    background-color: gray;
+    border-bottom: 1px solid;
+}
+
+.head {
+    display: flex;
+    justify-content: center;
+}
+
+nav a {
+    text-decoration: none;
+    margin-left: 20px;
+    color: white;
+}
+
+
+
+    .header_icon {
+        display: block;
+        margin: 0 auto;
+        width: 5em;
+        height: 5em;
+    }
+
+.profile_container {
+    max-width: 100%;
+    height: 100%;
+    
+}
+
+.yourName {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+h1, .title {
+    font-size: 3vw;
+    color: #007fff;
+}
+
+.information_container {
+    display: flex;
+    flex-direction: row;
+    max-width: 100%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.avatar_container {
+    max-width: 25%;
+}
+    .myAvatar {
+        max-width: 100%;
+        max-height: 80%;
+    }
+
+.information {
+    max-width: 35%;
+}
+
+.lessons {
+    max-width: 25%;
+}
+
+p{
+    font-size: 1.5vw;
+}
+
+/* Profile style END */
+
+/* Items style START */
+
+/* row container */
+.row_container {
+    padding: 0 2px;
+    max-width: 100%;
+    
+}
+
+.items_row_container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.item1, .item2, .item3, .item4 {
+    max-width: 23%;
+}
+
+.item_img {
+    max-width: 100%;
+}
+
+.title {
+    text-align: center;
+    font-size: 2vw;
+}
+
+/* column container */
+
+.items_col_container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.item5, .item6, .item7, .item8 {
+    max-width: 48%;
+    
+}
+
+/* Items style END */
+
+/* стили для footer */
+
+.footer {
+    width: 100%;
+    height: auto;
+    background-color: black;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 25px;
+}
+
+footer a {
+    color: white;
+    font-size: 14px;
+    margin-left: 10px;
+    text-decoration: none;
+}
+
+
+.logo_telegram, .logo_github {
+    max-width: 40px;
+    max-height: 40px;
+}
+
+
+/* adaptive style START */
+@media screen and (max-width: 400px) {
+    .avatar_container, .information, .lessons, 
+    .item1, .item2, .item3, .item4 {
+        max-width: 300px;
+    }
+
+    .information_container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    p {
+        font-size: 3vw;
+    }
+    h1, .title {
+        font-size: 4vw;
+    }
+}
+
+@media screen and (min-width: 401px) and (max-width: 800px) {
+    .avatar_container, .information, .lessons, 
+    .item1, .item2, .item3, .item4 {
+        max-width: 400px;
+    }
+
+    .information_container {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .myAvatar {
+        max-width: 40vw;
+        max-height: 50vw;
+    }
+
+    .information, .lessons {
+        max-width: 100%;
+        max-height: 20vw;
+    }
+    
+    p {
+        font-size: 2vw;
+        margin: 0px 5px;
+    }
+
+    h1, .title {
+        font-size: 4vw;
+    }
+}
+

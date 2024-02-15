@@ -1,0 +1,15 @@
+body {
+    background-color: darkgrey;
+}
+
+.head {
+    text-align: center;
+}
+
+.p {
+    font-size: 36px;
+}
+.decision2 {
+    display: flex;
+    justify-content: space-around;
+}

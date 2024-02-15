@@ -1,0 +1,94 @@
+main {
+    height: 41vw;
+}
+
+table, td {
+    border: 1px solid black;
+    padding: 0;
+    margin: 15px auto;
+}
+
+img {
+    width: 100px;
+    height: auto;
+}
+
+.red {
+    background-color: #F2A092;
+}
+
+.yellow {
+    background-color: #FDF8A6;
+}
+
+.blue {
+    background-color: #97D0ED;
+}
+
+/* element style */
+
+.element_container {
+    display: grid;
+    justify-content: center;
+    margin: 1vw;
+}
+
+.element {
+    display: grid;
+    background-color: #97D0ED;
+    width: fit-content;
+    border: 1px solid;
+    justify-content: center;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: 
+    'num ... abb'
+    '... ... mass'
+    'scale ... title';
+}
+
+.num {
+    grid-area: num;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0px 4px;
+}
+
+.scale {
+    grid-area: scale;
+    font-size: 15px;
+    font-weight: bold;
+    margin: 0px 4px;
+}
+
+.abb {
+    grid-area: abb;
+    font-weight: bold;
+    font-size: 18px;
+    margin: 2px 4px;
+}
+
+.mass {
+    grid-area: mass;
+    font-weight: bold;
+    font-size: 12px;
+    margin: 0px 4px;
+}
+
+.title {
+    grid-area: title;
+    font-weight: bold;
+    font-size: 15px;
+    margin: 0px 4px;
+}
+
+p {
+    margin: 0px;
+}
+
+.p_left {
+    float: left;
+}
+
+.p_right {
+    float: right;
+}
