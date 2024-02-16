@@ -1,0 +1,42 @@
+.hydrogen{
+  display: grid;
+  width: 670px;
+  height: 400px;
+  background-color:#d68d92;
+  grid-template-columns: repeat(3,1fr);
+  grid-template-areas:
+  "big-H number number"
+  "big-H weig weig"
+  "name name name";
+}
+.element-M{
+  display: grid;
+  /* border: 1px solid #000; */
+  font-size: 100px;
+  font-weight: bold;
+} 
+.big-H {
+  grid-area: big-H;
+  font-size: 200px; 
+  justify-self: start;
+  align-self:start;
+}
+.number {
+  grid-area: number;
+  align-self:end;
+  justify-self: end;
+  
+}
+.weig {
+  grid-area: weig;
+  font-size: 100px;
+  font-weight: lighter;
+  align-self: start;
+  justify-self: end;
+}
+.name {
+  grid-area: name;
+  font-size: 135px;
+  align-self: start;
+  justify-self: start;
+}

@@ -1,0 +1,243 @@
+:root {
+	--bg-color: rgba(252, 249, 249, 0.096);
+	--bg-color-gradient: linear-gradient(45deg, #eecfba, #70a3bbf5);
+	--text-color: rgb(37, 37, 37);
+	--shadow: 3px 3px 7px 0 rgb(68, 68, 68);
+	--footer-bg-color: #404243;
+	--nav-color-text:#404040;
+	--border-color:black;
+}
+
+.dark--mode{
+	--bg-color: linear-gradient(0deg, rgba(7, 28, 102, 1) 25%, rgba(69, 70, 11, 1) 100%);
+	--bg-color-gradient: linear-gradient(0deg, rgba(7, 28, 102, 1) 25%, rgba(69, 70, 11, 1) 100%);
+	--text-color: rgb(248, 248, 248);
+	--shadow: 3px 3px 7px 0 rgb(219, 219, 219);
+	color-scheme: dark;
+	--footer-bg-color:none;
+	--nav-color-text: #d3cece;
+	--border-color:#fff;
+	}
+.white--mode{
+	--bg-color: rgba(252, 249, 249, 0.096);
+	--bg-color-gradient: linear-gradient(45deg, #eecfba, #70a3bbf5);
+	--text-color: rgb(37, 37, 37);
+	--shadow: 3px 3px 7px 0 rgb(68, 68, 68);
+	--footer-bg-color: #404243;
+	--nav-color-text: #404040;
+	--border-color: black;
+}
+
+@media (max-width: 1100px) {
+	.wrapper {
+		flex-direction: column;
+	}
+
+	.box {
+		text-align: center;
+		margin: 0 auto;
+	}
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	background: var(--bg-color-gradient);
+}
+
+.content {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+header {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	box-sizing: border-box;
+	align-items: center;
+	padding: 22px 0px;
+	gap: 96px;
+}
+
+a {
+	text-decoration: none;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: 300;
+	font-size: 20px;
+	line-height: 22px;
+	text-align: center;
+	color: #000000;
+}
+
+main {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	flex: 1;
+}
+
+h1 {
+	text-align: center;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: 300;
+	font-size: 40px;
+	line-height: 47px;
+	color: var(--text-color);
+}
+
+.wrapper {
+	display: flex;
+	gap: 30px;
+	flex-grow: 1;
+	margin: 50px;
+}
+
+.photo {
+	width: 330px;
+}
+
+.box {
+	text-align: center;
+	flex: 2;
+}
+
+.card {
+	background-color: var(--bg-color);
+	box-shadow: var(--shadow);
+	border-radius: 5px;
+	padding: 1em;
+}
+
+.card_1 {
+	flex: 2;
+}
+
+.card_2 {
+	align-self: start;
+	flex: 1;
+}
+
+.card__info {
+	color: var(--text-color);
+	text-align: justify;
+}
+
+.card__title {
+	text-align: center;
+	color: var(--text-color);
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	text-transform: uppercase;
+	margin: 0px;
+}
+
+p {
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: 300;
+	font-size: 24px;
+	line-height: 34px;
+	color: var(--text-color);
+}
+
+footer {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	width: 100%;
+	padding: 50px 0px;
+	align-items: center;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	line-height: 23px;
+	text-align: center;
+	color: #c5c5c5;
+	background: var(--footer-bg-color);
+}
+
+header a {
+	display: block;
+	text-decoration: none;
+	outline: none;
+	transition: 0.3s ease-in-out;
+}
+
+nav {
+	display: table;
+	margin: 0 auto;
+}
+
+nav ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.topmenu:after {
+	content: '';
+	display: table;
+	clear: both;
+}
+
+.topmenu>li {
+	width: 25%;
+	float: left;
+	position: relative;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.topmenu>li>a {
+	text-transform: uppercase;
+	font-size: 14px;
+	font-weight: bold;
+	color:var(--nav-color-text);
+	padding: 15px 30px;
+}
+
+.topmenu li a:hover {
+	color: #d5b45b;
+}
+
+.submenu-link:after {
+	content: '\f107';
+	font-family: 'FontAwesome';
+	color: inherit;
+	margin-left: 10px;
+}
+
+.submenu {
+	background: #273037;
+	position: absolute;
+	left: 0;
+	top: 100%;
+	z-index: 5;
+	width: 180px;
+	opacity: 0;
+	transform: scaleY(0);
+	transform-origin: 0 0;
+	transition: 0.5s ease-in-out;
+}
+
+.submenu a {
+	color: rgb(255, 255, 255);
+	text-align: left;
+	padding: 12px 15px;
+	font-size: 13px;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.submenu li:last-child a {
+	border-bottom: none;
+}
+
+.topmenu>li:hover .submenu {
+	opacity: 1;
+	transform: scaleY(1);
+}
