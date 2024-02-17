@@ -1,5 +1,5 @@
 <?php
-$hours = date('h')+2; //чтобы было не московское время
+$hours = getdate()["hours"]+2; //чтобы было не московское время
 if ($hours > 8 && $hours < 20)
 {
     $classThime =  "whiteThime";

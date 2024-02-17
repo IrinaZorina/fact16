@@ -23,7 +23,7 @@
         <p <?php echo $colorClassText ?>>Телефон: 89089222218</p> 
         <p <?php echo $colorClassText ?>>В соц. сетях:    
         </p> 
-        <a href="https://vk.com/id151388677" target="_blank" title="Вконтакте">
+        <a href="" target="_blank" title="Вконтакте">
             <div class="imgFooter"></div>
         </a>
     </footer>
