@@ -7,9 +7,15 @@ body {
 }
 
 .p {
-    font-size: 36px;
+    font-size: 25px;
 }
-.decision2 {
-    display: flex;
-    justify-content: space-around;
+
+.decision {
+    font-size: 20px;
+    text-align: center;
+}
+
+img {
+    height: 300px;
+    width: 300px;
 }
