@@ -1,0 +1,141 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Стили для адаптивной шапки */
+
+.header {
+    padding: 20px; /* Увеличим внутренний отступ */
+    display: flex; /* Сделаем блоки внутри шапки flex-контейнером */
+    justify-content: space-between; /* Распределим элементы по ширине шапки */
+    align-items: center; /* Выровняем элементы по вертикали */
+}
+
+.header__logo img {
+    width: 80px; /* Уменьшим размер логотипа */
+}
+
+.header__menu {
+    display: flex; /* Сделаем меню flex-контейнером */
+}
+
+.header__menu ul {
+    list-style: none; /* Уберем маркеры списка */
+    padding: 0; /* Уберем внутренний отступ списка */
+    display: flex; /* Сделаем список flex-контейнером */
+}
+
+.header__menu li {
+    margin-right: 20px; /* Увеличим отступ между пунктами меню */
+}
+
+.header__menu a {
+    text-decoration: none; /* Уберем подчеркивание */
+    font-size: 18px; /* Размер шрифта */
+    transition: color 0.3s ease; /* Плавное изменение цвета при наведении */
+}
+
+.header__menu a:hover {
+    color: #ffd700; /* Изменяем цвет ссылки при наведении */
+}
+.main-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.second-block {
+    max-width: 600px;
+}
+
+.second-block img {
+    max-width: 40%;
+    height: auto;
+}
+
+.third-block {
+    flex-basis: 48%;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.third-block__name {
+    margin-bottom: 10px;
+}
+
+.fourth-fifth-block {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.fourth-block,
+.fifth-block {
+    flex-basis: 48%;
+    margin-bottom: 20px;
+}
+/* Стили для футера */
+.footer {
+    padding: 20px; /* Внутренний отступ */
+    text-align: center; /* Выравнивание текста по центру */
+}
+
+/* Стили для контактной информации в футере */
+.footer__contact-info p {
+    margin: 5px 0; /* Внешний отступ между параграфами */
+}
+
+/* Стили для списка социальных иконок */
+.footer-social-list {
+    list-style: none; /* Убираем маркеры у списка */
+    padding: 0; /* Убираем внутренний отступ у списка */
+    margin-top: 20px; /* Внешний отступ сверху */
+}
+
+/* Стили для элементов списка социальных иконок */
+.footer-social-item {
+    display: inline-block; /* Отображаем элементы в ряд */
+    margin-right: 15px; /* Внешний отступ справа */
+}
+
+/* Стили для ссылок на социальные сети */
+.footer-social-link {
+    text-decoration: none; /* Убираем подчеркивание у ссылок */
+    transition: color 0.3s ease; /* Плавное изменение цвета при наведении */
+}
+
+/* Стили для иконок социальных сетей */
+.footer-social-icon {
+    width: 25px; /* Ширина иконок */
+    height: auto; /* Автоматическая высота для сохранения пропорций */
+    vertical-align: middle; /* Выравнивание иконок по центру по вертикали */
+}
+
+/* Стили для невидимого текста (для скринридеров) */
+.visually-hidden {
+    position: absolute; /* Позиционирование абсолютно */
+    width: 1px; /* Ширина 1px */
+    height: 1px; /* Высота 1px */
+    padding: 0; /* Убираем отступы */
+    margin: -1px; /* Убираем отрицательные отступы */
+    overflow: hidden; /* Скрываем содержимое, выходящее за пределы */
+    clip: rect(0, 0, 0, 0); /* Обрезаем содержимое до размеров контейнера */
+    border: 0; /* Убираем границу */
+}
+
+
+@media screen and (max-width: 768px) {
+    .third-block {
+        flex-basis: 100%;
+    }
+
+    .fourth-block,
+    .fifth-block {
+        flex-basis: 100%;
+    }
+}
+

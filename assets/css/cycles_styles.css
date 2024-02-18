@@ -1,0 +1,55 @@
+/* Общие стили для страницы */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Стили для основного заголовка */
+h1 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Стили для разделов */
+section {
+    margin: 20px auto;
+    max-width: 800px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+/* Стили для подзаголовков */
+h2 {
+    margin-top: 0;
+}
+
+/* Стили для текста внутри разделов */
+p {
+    margin-bottom: 10px;
+}
+
+/* Стили для решений задач */
+section h4 {
+    margin-top: 10px;
+}
+
+/* Стили для вывода результатов и итераций */
+section p {
+    font-weight: bold;
+}
+
+/* Стили для чисел в столбце */
+section h3+p {
+    column-count: 3;
+    column-gap: 20px;
+}
+
+/* Медиазапросы для адаптивности */
+@media only screen and (max-width: 600px) {
+    section {
+        padding: 10px;
+    }
+}
