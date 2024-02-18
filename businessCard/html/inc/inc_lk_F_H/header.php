@@ -25,6 +25,7 @@ if ($time >= 8 && $time <= 20) {
 			<li><a href="#" class="submenu-link">php</a>
 				<ul class="submenu">
 					<li><a href="../../../html/lesson_php/loop.php">Циклы</a></li>
+					<li><a href="../../../html/lesson_php/array.php">Массивы</a></li>
 				</ul>
 			</li>
 		</ul>
