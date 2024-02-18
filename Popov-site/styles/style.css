@@ -353,3 +353,14 @@ grid-template-rows: repeat(4, auto);
 .articles {
   margin-bottom: 50px;
 }
+.center {
+  text-align: center;
+}
+.m-50 {
+  margin: 50px 0;
+}
+.arrays {
+  display: grid;
+grid-template-columns: 30% 50% 20%;
+grid-template-rows: repeat(2, auto);
+}
