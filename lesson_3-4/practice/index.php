@@ -55,8 +55,8 @@ list($piApproximation, $numTerms) = computePi($precision);
 echo "Число Пи приближенно равно: " . 4 * $piApproximation . "<br>Минимальное количество слагаемых: $numTerms";
 
 
-/* Задание 4. Дана последовательность, состоящая из дробей: 1/1, 4/2, 7/3, 10/4, ... 
-   Какое минимальное количество элементов последовательности нужно сложить, чтобы сумма превысила заданное число S > 10? */
+// /* Задание 4. Дана последовательность, состоящая из дробей: 1/1, 4/2, 7/3, 10/4, ... 
+//    Какое минимальное количество элементов последовательности нужно сложить, чтобы сумма превысила заданное число S > 10? */
 
 function computeSum($target)
 {
@@ -107,8 +107,6 @@ if ($k > 0 && is_int($k)) {
 Вывести цифры этого числа в порядке неубывания (например, 546085 =>045568). 
 Процедуры и функции работы со строками не использовать. */
 
-// Время выполнения O(n^2)
-
 // Получение длины числа
 function getNumberLength($n)
 {
@@ -136,13 +134,11 @@ function removeDigit($number, $excludeDigit)
   }
 }
 
-$k = $n = 9054309;
-
-echo "Начальное число: $k <br>";
-
-$length = getNumberLength($k);
+$k = $n = $temp = 9054390;
+$length = getNumberLength($temp);
 $sortedDigits = "";
 
+// Сортировка по возрастанию
 for ($i = 0; $i < $length; $i++) {
   $k = $n;
   $min = $k % 10;
@@ -163,17 +159,45 @@ for ($i = 0; $i < $length; $i++) {
     $k = (int) ($k / 10);
   }
 
-  if ($n != 0) {
+  if ($n != 0 && getNumberLength(intval($sortedDigits)) < $length) {
     $sortedDigits .= $min;
   }
 
   $n = removeDigit($n, $min);
 }
 
-echo "Отсортированное число: $sortedDigits";
+echo "Сортировка цифр числа по возрастанию: $sortedDigits";
 
 /* Задание 7. *Дано произвольное целое положительное число K (). 
 Вывести цифры этого числа в порядке невозрастания (например, 546085=>865540). 
 Процедуры и функции работы со строками не использовать. */
 
+// Сортировка по убыванию
+for ($i = $length; $i > 0; $i--) {
+  $k = $n;
+  $max = $k % 10;
+  $count = 0;
 
+  while ($k > 0) {
+    $currentDigit = (int) $k % 10;
+
+    if ($currentDigit > $max) {
+      $max = $currentDigit;
+    } elseif ($currentDigit == $max) {
+      $count++;
+      if ($count > 1) {
+        $sortedDigits .= $currentDigit;
+      }
+    }
+
+    $k = (int) ($k / 10);
+  }
+
+  if ($n >= 0 && getNumberLength(intval($sortedDigits)) < $length) {
+    $sortedDigits .= $max;
+  }
+
+  $n = removeDigit($n, $max);
+}
+
+echo "Сортировка цифр числа по убыванию: $sortedDigits";
