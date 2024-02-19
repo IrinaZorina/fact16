@@ -28,7 +28,7 @@ if ($time > 8.00 && $time<20.00){
     
 </head>
 
-<body style = "background-image:url('<?php echo $data ?>'); opacity: 1;";>
+<body style = "background-image:url('<?php echo $data ?>'); opacity: 0.8;";>
 
 
     
