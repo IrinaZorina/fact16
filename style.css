@@ -14,6 +14,7 @@
 }
 .header-wrapper {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
    
@@ -42,13 +43,13 @@ img {
 }
 .main-description {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+   justify-content: center;
 
 }
 .text {
+    margin-left: 30px;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
 }
 .main-content h1 {
@@ -57,38 +58,42 @@ img {
 }
 .hobby {
     height: 200px;
-    margin: 0 10px 0;
     background-color: white;
     border-radius: 5px;
     box-shadow: 2px 3px 12px lightgray;
     padding: 15px 15px 15px;
     width: 400px;
-    font-size: 25px;
+    font-size: 20px;
    
 
 }
 .rewiew {
     height: 200px;
-    margin: 0 10px 0;
+    
     background-color: white;
     border-radius: 5px;
     box-shadow: 2px 3px 10px lightgray;
     padding: 15px 15px 15px;
     width: 400px;
     font-size: 25px;
+    margin-left: 10px;
 }
 
 .footer{
-    margin: 30vh 0 0;
     background-color: black;
-    height: 300px;
+    margin-top: 20%;
+    overflow-y: hidden;
 }
 .footer__wrapper {
-    padding: 20px 0 0 ;
+    padding: 20px 0 0 ;   
 } 
+.img-contact__block {
+    width: 150px;
+    height: 150px;
+}
 .img-contact__block .img-contact {
-    width: 200px;
-    height: 200px;
+   width: 100%;
+   height: 100%;
 }
 
 .contacts {
@@ -97,4 +102,33 @@ img {
     align-items: center;
     justify-content: center;
     font-size: 25px;
+}
+.task__block {
+    width: 400px;
+    height: 200px;
+    box-shadow: 2px 3px 12px lightgray;
+    padding: 15px 15px 15px;
+    background-color: white;
+}
+.nav {
+   font-size: 20px;
+   margin: 20px 0 0;
+
+}
+.nav li a {
+    text-decoration: none;
+    color: white;
+   
+}
+
+ul {
+    display: flex;
+    align-items: center;    
+}
+.nav__link{
+    list-style-type: none;
+    margin-left: 20px;
+}
+.nav__link:first-child {
+    margin-left: 0px;
 }
