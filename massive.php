@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    
     <title>Document</title>
     <style>
         .img_mass {
@@ -46,9 +47,9 @@
     ?>
     <h3 style="color:black">Задача 3</h3>
     <?php
-        $arr3= ['img/mass_pict/dog1.jpeg', 'img/mass_pict/dog2.jpeg', 'img/mass_pict/dog3.jpeg'];
-        $rand_img = $arr3[mt_rand(1 , 10)];
-        echo "<img src= '$rand_img' class='img_mass'>";
+        $arr3= ['img/mass_pict/dog1.jpeg', 'img/mass_pict/dog2.jpg', 'img/mass_pict/dog3.jpeg'];
+        $rand_img = $arr3[mt_rand(0 , 2)];
+        echo "<img src= $rand_img class='img_mass'>";
     ?>
 
 
