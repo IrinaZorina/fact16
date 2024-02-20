@@ -2,7 +2,7 @@
 /* Задание 1. Выведите столбец чисел от 5 до 13. */
 
 for ($i = 5; $i <= 13; $i++) {
-    echo "$i <br>";
+  echo "$i <br>";
 }
 
 
@@ -23,9 +23,9 @@ while ($num >= $target) {
 
 echo "<br>Количество итераций: $count";
 
-for($num = 1000, $count = 0; $num >= 50; $count++) {
+for ($num = 1000, $count = 0; $num >= 50; $count++) {
   $num /= 2;
-} 
+}
 
 echo "<br>Количество итераций: $count";
 
@@ -42,6 +42,9 @@ if (isset($_POST["submit"])) {
 
   for ($j = 0; $j <= 10 - $i; $j++) {
     $sequence .= strval($j);
+    if ($j < 10 - $i) {
+      $sequence .= ", ";
+    }
   }
 }
 ?>
