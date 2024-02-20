@@ -1,0 +1,11 @@
+header{
+    background-color: gray;
+    padding: 20px;
+    text-align: center;
+}
+table{
+    margin:auto;
+}
+td, tr{
+    border: 1px solid black;
+}
