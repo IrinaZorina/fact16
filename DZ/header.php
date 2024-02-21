@@ -25,6 +25,7 @@
             <a <?php echo $colorClassText ?> href="table.php" target="_self">Задание Table</a>
             <a <?php echo $colorClassText ?> href="cycles.php" target="_self">Циклы</a>
             <a <?php echo $colorClassText ?> href="array.php" target="_self">Массивы</a>
+            <a <?php echo $colorClassText ?> href="string.php" target="_self">Строки</a>
         </nav>
     </header>
 </body>

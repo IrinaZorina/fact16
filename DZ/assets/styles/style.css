@@ -16,6 +16,7 @@ p,
 body,
 .headerImg {
     margin: 0;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 /* информационный блок */
