@@ -10,7 +10,7 @@
 <?php require_once 'inc/header.php' ?>
 <body>
     <div class="container">
-        <div class="head"><h2>Слайд № 25</h2></div>
+        <div class="head"><h1>Слайд № 25</h1></div>
         <div class="quest">
             <div class="task"><p class='p'><B>1. Выведите столбец чисел от 5 до 13.</B></p></div>
             <div class="decision">
@@ -95,7 +95,7 @@
                 ?>               
             </div>               
         </div>
-        <div class="head"><h2>Урок 5-6 слайд № 15</h2></div>
+        <div class="head"><h1>Урок 5-6 слайд № 15</h1></div>
         <div class="quest">
             <div class="task"><p><b>1. Дан массив с элементами 50, 45, 40, 35, 30. Найдите сумму элементов этого массива. Запишите ее в переменную $result.</b></p></div>
             <div class="decision">
@@ -170,7 +170,52 @@
                 ?>
             </div>
         </div>
+        <div class="head"><h1>Урок 7-8 слайд №23</h1></div>
+        <div class="quest">
+            <div class="task"><p><b>1. Дана строка. Если в этой строке более 5-ти символов - вырежьте из нее первые 5 символов, добавьте троеточие в конец и выведите на экран. 
+            Если же в этой строке 5 и менее символов - необходимо вывести эту строку на экран.</b></p></div>
+            <div class="decision">
+                <?php
+                    $str = 'bitrix';
+                    echo "Дана строка: $str<br>";
+                    if (mb_strlen($str) > 5){
+                        echo 'Выводим: ' . substr($str, 0, 5) . '...';
+                    }else {
+                        echo "Выводим: $str";
+                    }
+                ?>
+            </div>
+        </div>
+        <div class="quest">
+            <div class="task"><p><b>2. Дана строка $str. Замените в ней все буквы 'a' на цифру 1, буквы 'b' - на 2, а буквы 'c' - на 3.</b></p></div>
+            <div class="decision">
+                <?php
+                    $str2 = 'abcacb';
+                    echo "Дана строка: $str2<br>";
+                    echo 'Выводим: ' . str_replace(array("a", "b", "c"), array("1", "2", "3"), $str2);
+                ?>
+            </div>
+        </div>
+        <div class="quest">
+            <div class="task"><p><b>3. Дана строка 'abc abc abc'. Определите позицию последней буквы 'b'.</b></p></div>
+            <div class="decision">
+                <?php
+                   $str3 = 'abc abc abc';
+                   echo strpos($str3, "b", -2);
+                ?>
+            </div>
+        </div>
+        <div class="quest">
+            <div class="task"><p><b>4. Дана строка 'html css php'. С помощью функции explode запишите каждое слово этой строки в отдельный элемент массива.</b></p></div>
+            <div class="decision">
+                <?php
+                    $str4 = 'html css php';
+                    print_r(explode(" ", $str4));
+                ?>
+            </div>
+        </div>
     </div> 
     <?php require_once 'inc/footer.php' ?>        
 </body>
 </html>
+
