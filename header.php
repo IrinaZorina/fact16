@@ -17,6 +17,7 @@
                     <ul>
                         <li class="nav__link"><a href="cycle.php">Циклы</a></li>
                         <li class="nav__link"><a href="massive.php">Массивы</a></li>  
+                        <li class="nav__link"><a href="string.php">Строки</a></li>  
                         
                     </ul>
                 </nav>
