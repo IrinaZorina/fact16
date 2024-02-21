@@ -12,8 +12,8 @@
 </head>
 <?php require "../inc/inc_lk_F_H/header.php"; ?>
 <div class="container">
-  <div class="form__loop loop__1">
-    <textarea class="text__loop" name="textarea" cols="30" rows="30" readonly>
+  <div class="form__array array__1">
+    <textarea class="text__array" name="textarea" cols="30" rows="30" readonly>
 // Найти среднюю в группе оценку по каждому из предметов. Суммирование оценок по каждому предмету.
 
 <?

@@ -1,0 +1,21 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  padding: 10px;
+  gap: 30px;
+}
+
+.text__array {
+  max-height: 500px;
+  font-size: 20px;
+  padding: 1rem;
+  resize: none;
+  overflow: auto;
+}
+
+textarea::-webkit-scrollbar {
+  width: 1px;
+  height: 1px;
+}
