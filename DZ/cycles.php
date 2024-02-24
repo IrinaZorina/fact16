@@ -166,16 +166,6 @@ include_once "header.php";
 
         echo "<br>7. Дан одномерный массив из 1000 элементов, состоящий из случайных целых чисел в диапазоне от 0 до 50. 
         Найти сумму элементов массива, с начала массива, до первого элемента равного нулю. <br>";
-        function GetRandArr($min, $max, $count):array
-        {
-            $arr = array();
-            for ($index = 0; $index < $count; $index++)
-            {
-                $arr[] = mt_rand($min, $max);
-            }
-            return $arr;
-        }
-
         $min = 0;
         $max = 50;
         $count = 1000;

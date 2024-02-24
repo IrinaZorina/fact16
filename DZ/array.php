@@ -375,63 +375,7 @@ include_once "header.php";
     enum Order{
         case increases;
         case decrease;
-    }
-    //сортировка
-    function SortArray($arr, $order):array
-    {
-        //базовый случай
-        if (count($arr) < 2)
-        {
-            return $arr;
-        }
-        $newArr = array();
-        //базовый случай с 2 зна
-        if (count($arr) == 2)
-        {
-            //первый элемент меньше втого и сортировка по возрастанию или первый больше второго и сортировка по убыванию
-            if ((($arr[0] < $arr[1]) && ($order == Order::increases)) || (($arr[0] > $arr[1]) && ($order == Order::decrease)))
-            {
-                $newArr[]= $arr[0];
-                $newArr[]= $arr[1];
-            }
-            else
-            {
-                $newArr[]= $arr[1];
-                $newArr[]= $arr[0];  
-            }
-            return $newArr;
-        }
-        $indexArr = mt_rand(0, count($arr)-1);
-        $arrLeft = array();
-        $arrRight = array();
-        for ($index = 0; $index < count($arr); $index++)
-        {
-            if ($indexArr == $index) 
-            {
-                continue;
-            }
-            if ((($arr[$index] < $arr[$indexArr]) && ($order == Order::increases)) || (($arr[$index] > $arr[$indexArr]) && ($order == Order::decrease)))
-            {
-                $arrLeft[] = $arr[$index];
-            }
-            else
-            {
-                $arrRight[] = $arr[$index];
-            }
-        }
-        $arrLeftAdd = SortArray($arrLeft, $order);
-        for ($index = 0; $index < count($arrLeftAdd); $index++)
-        {
-            $newArr[] = $arrLeftAdd[$index];
-        }
-        $newArr[] = $arr[$indexArr];
-        $arrRightAdd = SortArray($arrRight, $order);
-        for ($index = 0; $index < count($arrRightAdd); $index++)
-        {
-            $newArr[] = $arrRightAdd[$index];
-        }
-        return $newArr;
-    }
+    }   
 
     $arr1 = SortArray($arr, Order::increases);
     //вывод масива по возрастанию на экран

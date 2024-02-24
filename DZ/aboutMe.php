@@ -91,11 +91,9 @@
                         ?>
                     </ul>
                     <?php
-                     echo "<p $colorClassText>";
+                        echo "<p $colorClassText>";
                         echo "<br>"; 
-                        $nowDate = date("d.m.y");
-                        echo "Текущая дата: $nowDate<br>"; 
-                        echo "Количество дней: ".round((strtotime($nowDate)-strtotime($date))/60/60/24)."</p>"; 
+                        echo "Количество дней: ".GetDifferenceDate($date)."</p>"; 
                         GetCountWordAndVowel($str);  
                     ?>
                 </div>

@@ -22,7 +22,8 @@
 ?>
 <main>
     <?php 
-        echo "<h1>Слайд 22</h1>";
+        echo "<h1 $colorClassText>Слайд 22</h1>";
+        echo "<p $colorClassText>";
         echo "1. Дана строка «fact». Привести строку к виду «Fact»<br>";
         $str3 = "fact";
         echo $str3."=>".ucfirst($str3)."<br>";
@@ -78,8 +79,10 @@
         CheckStr($str);
         $str = "1dfadf";   
         CheckStr($str);
+        echo "</p>";
 
-        echo "<h1>Слайд 23</h1>";
+        echo "<h1 $colorClassText>Слайд 23</h1>";
+        echo "<p $colorClassText>";
         echo "1. Дана строка. Если в этой строке более 5-ти символов - вырежьте из нее первые 5 символов, добавьте 
         троеточие в конец и выведите на экран. 
         Если же в этой строке 5 и менее символов - необходимо вывести эту строку на экран<br>";
@@ -140,6 +143,7 @@
         $data1 = strtotime($str1);
         $data2 = strtotime($str2);
         echo ($data2-$data1)/60/60/24;
+        echo "</p>";
 
         //Задания из файла example
         echo "<h1 $colorClassText>Задания из файла example</h1>";
