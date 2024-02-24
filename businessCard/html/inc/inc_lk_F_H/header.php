@@ -27,6 +27,7 @@ if ($time >= 8 && $time <= 20) {
 					<li><a href="../../../html/lesson_php/loop.php">Циклы</a></li>
 					<li><a href="../../../html/lesson_php/array.php">Массивы</a></li>
 					<li><a href="../../../html/lesson_php/string.php">Строки</a></li>
+					<li><a href="../../../html/lesson_php/function.php">Функции</a></li>
 				</ul>
 			</li>
 		</ul>
