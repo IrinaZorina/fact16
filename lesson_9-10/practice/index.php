@@ -188,13 +188,14 @@ $outputCharInNewLine($str);
 $fd = fopen("../data/text.txt", 'r') or die("не удалось открыть файл");
 
 while (!feof($fd)) {
-  $str = htmlentities(fgets($fd));
-
+  $str = fgets($fd);
   $frequencyArray = [];
   $chars = ['?', '.', ',', '!'];
   $words = explode(" ", $str);
 
   for ($i = 0; $i < count($words); $i++) {
+    $words[$i] = strtolower($words[$i][0]) . mb_substr($words[$i], 1, mb_strlen($words[$i]));
+
     if (in_array($words[$i][-1], $chars)) {
       $words[$i] = substr($words[$i], 0, -1);
     }
@@ -205,8 +206,8 @@ while (!feof($fd)) {
       $frequencyArray[$words[$i]] = 1;
     }
   }
-
-  var_dump($frequencyArray);
 }
+
+var_dump($frequencyArray);
 
 fclose($fd);
