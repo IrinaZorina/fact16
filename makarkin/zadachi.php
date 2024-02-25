@@ -125,6 +125,70 @@ $str = 'html css php';
 $arr = explode(' ', $str);
 var_dump($arr);
 ?>
+<h1>Слайд №17. Функции</h1>
+<b>1. Создайте функцию, которая принимает одномерный массив и возвращает массив, заполненный случайными числами. </b>
+<br>
+<br>
+<?php
+function massive() {
+    $numbers = [];
+for ($i = 0; $i < 10; $i++) {
+    $numbers[$i] = mt_rand(0, 1000);
+}
+echo '<pre>';
+print_r ($numbers);
+echo '</pre>'; 
+}
+massive();
+?>
+<b>2. Дана строка «HTML, CSS, PHP, BITRIX». Написать функцию, которая определит количество слов в строке.</b>
+<br>
+<br>
+<?php
+function line() {
+    echo str_word_count('HTML, CSS, PHP, BITRIX');
+}
+line();
+?>
+<br>
+<br>
+<b>3. Дана строка «HTML, CSS, PHP, BITRIX». Написать функцию, которая выведет в обратном порядке буквы («XIRTIB ,PHP … »).</b>
+<br>
+<br>
+<?php
+function string() {
+    $str = "HTML, CSS, PHP, BITRIX";
+    echo strrev($str);
+}
+string();
+?>
+<br>
+<br>
+<b>4. Дана строка «HTML, CSS, PHP, BITRIX». Написать функцию, которая выводит на экран длину строки.</b>
+<br>
+<br>
+<?php
+function m_func() {
+    $str = "HTML, CSS, PHP, BITRIX";
+    echo strlen($str);
+}
+m_func();
+?>
+<br>
+<br>
+<b>Дана строка «HTML, CSS, PHP, BITRIX». Написать функцию, которая выводит каждую букву на новую строку.</b>
+<br>
+<br>
+<?php
+function newstr() {
+    $str = "HTML, CSS, PHP, BITRIX";
+    $arr = str_split ($str);
+    echo '<pre>';
+    print_r ($arr);
+    echo '</pre>';
+}
+newstr();
+?>
 <?php
 include('footer.php')
 ?>
