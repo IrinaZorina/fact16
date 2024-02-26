@@ -22,6 +22,13 @@
                 <li class="top_menu-item"><a href="task.php">Задачи PHP</a></li>
             </ul>
         </nav>
+        <nav class="menu">
+            <ul class="top_menu">
+                <li class="top_menu-item"><a href="task2.php">Масивы</a></li>
+                <li class="top_menu-item"><a href="task3.php">Строки</a></li>
+                <li class="top_menu-item"><a href="task4.php">Функции</a></li>
+            </ul>
+        </nav>
        <? $date = date("H");
 if($date >= 20 || $date <= 8)
 $img = "/img/tfone3.jpg";

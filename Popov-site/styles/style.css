@@ -4,6 +4,9 @@ body {
 .main {
   border-top: 2px solid blue;
 }
+.header {
+  min-height: 240px;
+}
 .container-index {
   width: 100%;
   display: flex;
@@ -238,7 +241,7 @@ th {
     margin-bottom: 20px;
   }
   .header {
-    height: 230px;
+    min-height: 470px;
   }
   .header nav {
     width: 51%;
