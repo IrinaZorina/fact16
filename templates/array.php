@@ -72,11 +72,18 @@
         </h3>
         <p>Решение:</p>
         <?php
+        $N = 20; // Задаем значение N
+
+        $numbers = array();
+        for ($i = 0; $i < $N; $i++) {
+            $numbers[] = mt_rand(-100, 100);
+        }
+        echo "Исходный массив чисел: " . implode(", ", $numbers) . "<br>";
+
         $minPositive = null;
         $maxNegative = null;
 
-        while ($minPositive === null || $maxNegative === null) {
-            $number = mt_rand(-100, 100);
+        foreach ($numbers as $number) {
             if ($number > 0 && ($minPositive === null || $number < $minPositive)) {
                 $minPositive = $number;
             }
@@ -85,7 +92,6 @@
                 $maxNegative = $number;
             }
         }
-
 
         echo "Минимальное положительное число: $minPositive<br>";
         echo "Максимальное отрицательное число: $maxNegative";
