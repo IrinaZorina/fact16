@@ -28,8 +28,7 @@
                 <li><a href="page_with_pictures_flex_grid.php">Кошачьи породы</a></li>
                 <li><a href="cycles.php">Циклы</a></li>
                 <li><a href="arrays.php">Массивы</a></li>
-
-
+                <li><a href="strings.php">Строки</a></li>
                 <!-- Другие пункты меню, если есть -->
             </ul>
         </nav>
