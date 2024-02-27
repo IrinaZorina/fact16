@@ -29,6 +29,7 @@
                 <li><a href="cycles.php">Циклы</a></li>
                 <li><a href="arrays.php">Массивы</a></li>
                 <li><a href="strings.php">Строки</a></li>
+                <li><a href="functions.php">Функции</a></li>
                 <!-- Другие пункты меню, если есть -->
             </ul>
         </nav>
