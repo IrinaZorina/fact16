@@ -51,7 +51,52 @@
         $rand_img = $arr3[mt_rand(0 , 2)];
         echo "<img src= $rand_img class='img_mass'>";
     ?>
+    <h3 style="color:black">Задача 5</h3>
+    <?php
+     $marks = [
+        ['math'=>5,'phisics'=>4,"chem"=>3, 'informatics'=> 5],
+        ['math'=>4,'phisics'=>3,"chem"=>5, 'informatics'=> 5],
+        ['math'=>3,'phisics'=>5,"chem"=>4, 'informatics'=> 5],
+        ['math'=>5,'phisics'=>5,"chem"=>4, 'informatics'=> 5]
+    ];
+    $sums = ['math'=>0,'phisics'=>0,"chem"=>0, 'informatics'=> 0];
+    $count = ['math'=>0,'phisics'=>0,"chem"=>0, 'informatics'=> 0];
+    foreach ($marks as $mark ) {
+        foreach($mark as $subj =>$value){
+            $sums[$subj] += $value;
+            $count[$subj]++;
+        }
+    }
+    $average = [];
+    foreach ($sums as $subject => $sum) {
+        $average[$subject] = $sum / $count[$subject];
+        # code...
+    }
+    foreach($average as $subject => $avg){
+        echo "$subject : $avg". "<br>";
+    }
+    ?>
+    <h3 style="color:black">Задача 6</h3>
+    <?php
+    $n = 10;
+    $arr;
+    for($i = 0; $i < $n; $i++ ) {
+        $arr[] = mt_rand(-100, 100);
+        echo "{$arr[$i]}";
+    }
+    $min = -100;
+    $max = 100;
 
+    for($i = 0; $i< $n; $i++){
+        if($arr[$i]< 0 && $arr[$i] > $max){
+            $max = $arr[$i];
+        }
+        if($arr[$i] > 0 && $arr[$i] < $min){
+            $min = $arr[$i];
+        }
+    }
+    echo "<br>min = $min; max = $max<br>";
+    ?>
 
  
 

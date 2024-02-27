@@ -44,7 +44,13 @@
         echo $strCss . "<br>";
         $strPhp= mb_substr($str4, 9, 3);
         echo $strPhp . "<br>";
-        
+        $str5 = "HELLO WORLD!!";
+        if($str > 5){
+                echo mb_substr($str5, 0, 5). "...";
+            }else {
+                echo $str;
+            }
+            echo "<br>";
         // $a = 100;//int
     // $b = "$a";//string
 
@@ -96,7 +102,7 @@
         // print_r($arr2);
         // echo mb_strtolower($str);
         //  echo "<h1>Задача 1 24 слайда</h1>";
-        // $str = "HELLO WORLD!!";
+        
         // if($str > 5){
         //     echo mb_substr($str, 0, 5). "...";
         // }else {
