@@ -10,14 +10,7 @@
 <?php
     include_once "function.php";
     include_once "getTime.php";
-    if ($hours > 8 && $hours < 20)
-    {
-        echo "<body class = \"bodyWhite\">";
-    }
-    else
-    {
-        echo "<body class = \"bodyBlack\">";
-    }
+    GetClassBody($hours);
     include_once "header.php";
 ?>
 <main>
@@ -147,7 +140,7 @@
 
         //Задания из файла example
         echo "<h1 $colorClassText>Задания из файла example</h1>";
-        echo "<h1 $colorClassText>Блок 2</h1>";
+        echo "<h1 $colorClassText>Блок 2. Одномерные массивы</h1>";
         echo "<p $colorClassText>";
 
         echo "<br>6.  Дан одномерный массив из N случайных действительных чисел в диапазоне от 11 до 22. 

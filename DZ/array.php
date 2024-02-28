@@ -8,14 +8,7 @@
 </head>
 <?php
 include_once "getTime.php";
-if ($hours > 8 && $hours < 20)
-{
-    echo "<body class = \"bodyWhite\">";
-}
-else
-{
-    echo "<body class = \"bodyBlack\">";
-}
+GetClassBody($hours);
 include_once "header.php";
 ?>
 <main>
@@ -279,7 +272,7 @@ include_once "header.php";
     
     //Файл example
     echo "<h1 $colorClassText>Задания из файла example</h1>";
-    echo "<h2 $colorClassText>Блок 1</h2>";
+    echo "<h2 $colorClassText>Блок 1. Циклы</h2>";
     echo "<p $colorClassText>";
     
     echo "<br>13. Дан одномерный массив из 1000 элементов, состоящий из случайных целых чисел в диапазоне от -6 до 4.
@@ -457,7 +450,7 @@ include_once "header.php";
     }
     echo "<br>Произведение всех цифр, больших $t = $p<br>";
     echo "</p>"; 
-    echo "<h2 $colorClassText>Блок 2</h2>";
+    echo "<h2 $colorClassText>Блок 2. Одномерные массивы</h2>";
     echo "<p $colorClassText>";
 
     echo "<br>1.  Дано N действительных случайных чисел в диапазоне от -100 до 100. Найти минимальное положительное число и максимальное отрицательное число.";

@@ -10,20 +10,13 @@
 <?php
     include_once "function.php";
     include_once "getTime.php";
-    if ($hours > 8 && $hours < 20)
-    {
-        echo "<body class = \"bodyWhite\">";
-    }
-    else
-    {
-        echo "<body class = \"bodyBlack\">";
-    }
+    GetClassBody($hours);
     include_once "header.php";
 ?>
 <main>
     <?php 
     echo "<h1 $colorClassText>Задания из файла example</h1>";
-    echo "<h1 $colorClassText>Блок 4</h1>";
+    echo "<h1 $colorClassText>Блок 4. Моелирование</h1>";
     echo "<p $colorClassText>";
     echo "1. На заводе собирают прибор из трех блоков. Известно, что среди блоков первого типа встречаются 2%
      со скрытыми дефектами, среди блоков второго и третьего типа — соответственно 3% и 5% дефектных. 

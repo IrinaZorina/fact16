@@ -11,14 +11,7 @@
 <?php
     include_once "function.php";
     include_once "getTime.php";
-    if ($hours > 8 && $hours < 20)
-    {
-        echo "<body class = \"bodyWhite\">";
-    }
-    else
-    {
-        echo "<body class = \"bodyBlack\">";
-    }
+    GetClassBody($hours);
     include_once "header.php";
 ?>
     <main>

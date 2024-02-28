@@ -7,17 +7,10 @@
     <title>function</title>
 </head>
 <body>
-    <?php
+<?php
     include_once "function.php";
     include_once "getTime.php";
-    if ($hours > 8 && $hours < 20)
-    {
-        echo "<body class = \"bodyWhite\">";
-    }
-    else
-    {
-        echo "<body class = \"bodyBlack\">";
-    }
+    GetClassBody($hours);
     include_once "header.php";
 ?>
 <main>
@@ -188,7 +181,7 @@
         echo "</p>";
 
         echo "<h1 $colorClassText>Задания из файла example</h1>";
-        echo "<h1 $colorClassText>Блок 3</h1>";
+        echo "<h1 $colorClassText>Блок 3. Двумерные массивы</h1>";
         echo "<p $colorClassText>";
         echo "<br>1.  Для группы учащихся известны годовые оценки по следующим предметам: математика, физика, химия, информатика. 
         Отобрать кандидатов на олимпиады (с отличными оценками) по каждому из предметов. Отбор кандидатов по предмету оформить в подпрограмме.<br>";

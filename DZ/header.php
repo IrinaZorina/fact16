@@ -29,6 +29,7 @@
             <a <?php echo $colorClassText ?> href="functionPage.php" target="_self">Функции</a>
             <a <?php echo $colorClassText ?> href="simulations.php" target="_self">Моделирование</a>
             <a <?php echo $colorClassText ?> href="taskFunction.php" target="_self">Задачи на функции</a>
+            <a <?php echo $colorClassText ?> href="taskString.php" target="_self">Задачи на строки</a>
         </nav>
     </header>
 </body>

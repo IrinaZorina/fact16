@@ -20,6 +20,19 @@
             }
         }
     }
+    
+    //вывод строки строки с тегом body
+    function GetClassBody($hours)
+    {
+        if ($hours > 8 && $hours < 20)
+        {
+            echo "<body class = \"bodyWhite\">";
+        }
+        else
+        {
+            echo "<body class = \"bodyBlack\">";
+        }
+    }
 
     //определение количества дней между датами
     function GetDifferenceDate($date):int
