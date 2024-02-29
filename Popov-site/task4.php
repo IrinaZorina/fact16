@@ -1,7 +1,7 @@
 <? include 'header.php'; ?>
 <main class="main">
     <div class="container">
-        <h2 class="center m-50">Строки</h2>
+        <h2 class="center m-50">Функции</h2>
         <section class="arrays">
             <div class="task">
                 <h3>Задача 1 слайд 17</h3>
