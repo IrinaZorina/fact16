@@ -161,7 +161,7 @@ echo $reverseAll($str);
 
 /* Задание 11. Дана строка «HTML, CSS, PHP, BITRIX». Написать функцию, которая выводит на экран длину строки. */
 
-$outputStringLength = fn ($text) => print(count(str_split($text)));
+$outputStringLength = fn ($text) => print(strlen($text));
 $outputStringLength($str);
 
 
