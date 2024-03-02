@@ -1,5 +1,5 @@
 To: tanik111097@gmail.com
 Subject: Test
-X-PHP-Originating-Script: 0:index6.php
+X-PHP-Originating-Script: 0:getPost1.php
 
-login =  commit =
+login = 111 commit = 1
