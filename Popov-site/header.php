@@ -27,7 +27,8 @@
                 <li class="top_menu-item"><a href="task2.php">Масивы</a></li>
                 <li class="top_menu-item"><a href="task3.php">Строки</a></li>
                 <li class="top_menu-item"><a href="task4.php">Функции</a></li>
-                <li class="top_menu-item"><a href="task5.php">Дополнительные задачи</a></li>
+                <li class="top_menu-item"><a href="task5.php">Доп. задачи</a></li>
+                <li class="top_menu-item"><a href="get-post.php">GET/POST</a></li>
             </ul>
         </nav>
        <? $date = date("H");
