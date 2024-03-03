@@ -4,6 +4,11 @@ echo "<br>";
 print_r($_POST);
 echo "<br>";
 print_r($_REQUEST);
+$myLink = null;
+
+if (isset($_GET['Laboratory'])) {
+  $myLink = htmlspecialchars($_GET['Laboratory']);
+}
 ?>
 <!doctype html>
 <html lang="en">
@@ -17,16 +22,16 @@ print_r($_REQUEST);
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-<form action="<?= $_SERVER["PHP_SELF"] ?>" method="GET">
-    <label for="lab-works">Лабораторные работы:</label>
-    <select id="lab-works" name="Lab">
-     <option value="">--Выберите лабораторную работу--</option>
-      <option value="Lab1">Лаб1</option>
-      <option value="Lab2">Лаб2</option>
-      <option value="Lab3">Лаб3</option>
-      <option value="Lab4">Лаб4</option>
+  <form action="index4.php" method="get">
+    <select name="Lab">
+      <option value="questionnaire" selected>Опрос</option>
+      <option value="Lab1">Lab1</option>
+      <option value="Lab2">Lab2</option>
+      <option value="Lab3">Lab3</option>
+      <option value="lab4">Lab4</option>
     </select>
-    <p><button type="submit">Перейти</button></p>
+    <input type="submit" name="Submit" value="submit">
   </form>
+  <a id="myLink" target="_blank" href="<?= $myLink ?>.php"><? echo $myLink ?></a>
 </body>
 </html>
