@@ -30,6 +30,8 @@
                 <li><a href="arrays.php">Массивы</a></li>
                 <li><a href="strings.php">Строки</a></li>
                 <li><a href="functions.php">Функции</a></li>
+                <li><a href="GET_POST/slide_16_task_3/questionnaire.php">Анкета</a></li>
+
                 <!-- Другие пункты меню, если есть -->
             </ul>
         </nav>
