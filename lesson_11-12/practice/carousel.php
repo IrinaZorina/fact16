@@ -9,15 +9,15 @@ $forward = basename($_SERVER["PHP_SELF"]) . "?image=" . $index = $image < $image
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
 </head>
 
 <body>
-	<img src="images/<?= $image ?>.png" alt="#">
-	<a href=<?= $back ?>>Назад</a>
-	<a href=<?= $forward ?>>Вперёд</a>
+  <img src="images/<?= $image ?>.png" alt="#">
+  <a href=<?= $back ?>>Назад</a>
+  <a href=<?= $forward ?>>Вперёд</a>
 </body>
 
 </html>
