@@ -24,13 +24,25 @@
     //вывод строки строки с тегом body
     function GetClassBody($hours)
     {
-        if ($hours > 8 && $hours < 20)
+        //получаю цвет
+        $color = isset($_COOKIE["color"])? $_COOKIE["color"] : "0";
+        //по уцмолчанию цвета нет - картинка
+        if ($color == "0")
         {
-            echo "<body class = \"bodyWhite\">";
+            if ($hours > 8 && $hours < 20)
+            {
+                echo "<body class = \"bodyWhite\">";
+            }
+            else
+            {
+                echo "<body class = \"bodyBlack\">";
+            }
         }
         else
-        {
-            echo "<body class = \"bodyBlack\">";
+        {   
+            //при установленном цвете - применяем индекс цвета к массиву цветов и определяем цвет
+            $arr = ["D6D8D9", "AFAFAF","717171","C9E1ED","A9E4FF"];            
+            echo "<body style=\"background-color: #{$arr[$color-1]};\">";
         }
     }
 
@@ -513,5 +525,74 @@
         }
         return $newArr;
     }
-       
+
+    //проверка пароля и логина
+    function CheckedPassword($login, $password)
+    {
+        $loginRight = 111;
+        $passwordRight = md5(111);
+        return ($login == $loginRight && $password == $passwordRight);
+    }
+
+    //получение цвета из запроса
+    function GetColor()
+    {
+        //получение цвета из запроса
+        $color = isset($_POST["color"]) ? $_POST["color"] : null;
+        //при отсутсвии запроса - выход
+        if ($color == null)
+        {
+            return;
+        }
+        //сохраняю в куки новый цвет
+        setcookie("color", $color, time()+3600*24);
+        //обновление страницы
+        header("Refresh:0");
+    }
+
+    //получение сообщения о последней странгице 
+    function GetLastPage($colorClassText)
+    {
+        $login = isset($_SESSION["login"]) ? $_SESSION["login"] : "";
+        $password = isset($_SESSION["password"]) ? $_SESSION["password"] : "";
+        //проверка наличия параля и логина
+        if ($login == "" || $password == "")
+        {
+            return;
+        }
+        //проверка корректности логина и пароля
+        if (!CheckedPassword($login, $password))
+        {
+            return;
+        }
+        //получение предыдущей страницы
+        $oldPage = isset($_COOKIE["page"]) ? $_COOKIE["page"] : "Авторизация";
+        echo "<p $colorClassText style=\"margin:10px;\">Предыдущая страница - $oldPage</p>";
+    }
+
+    //вставка комбобокса
+    function PasteSelect()
+    {
+        //получение индекса цветва
+        $color = isset($_COOKIE["color"])? $_COOKIE["color"] : "0";
+        //массив цветов
+        $arr = ["Картинка", "Светлый серый", "Серый", "Темный серый", "Светлый голубой", "Голубой"];
+        //вывод комбобокса
+        echo "
+        <form method=\"post\">
+        <select type=\"combobox\" name=\"color\">";
+        for ($index = 0; $index < count($arr); $index++)
+        {
+            $selected = "";            
+            //установка выбранного цвета текущим
+            if ($index == $color)
+            {
+                $selected = " selected";
+            }
+            echo "<option value=\"$index\"$selected>{$arr[$index]}</option>";
+        }
+        echo "</select>
+        <input type=\"submit\" value=\"Отправить\">
+        </form>";
+    }
 ?>

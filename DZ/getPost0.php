@@ -16,25 +16,25 @@
 ?>
     <form method="post">
         <fieldset>
-            <legend>Задача 1. Создайте форму, состоящую из текстового поля, многострочного поля, группы выключателей, группы переключателей</legend>
+            <legend <?=$colorClassText?>>Задача 1. Создайте форму, состоящую из текстового поля, многострочного поля, группы выключателей, группы переключателей</legend>
             <input type="text" name = "text"><br>
             <textarea name="textArea"></textarea><br>
-            <label>1:
+            <label <?=$colorClassText?>>1:
                 <input type="checkbox" name="checkBox[]" value="checkbox1">
             </label>
-            <label>2:
+            <label <?=$colorClassText?>>2:
                 <input type="checkbox" name="checkBox[]" value="checkbox2">
             </label>
-            <label>3:
+            <label <?=$colorClassText?>>3:
                 <input type="checkbox" name="checkBox[]" value="checkbox3"><br>
             </label>
-            <label>1:
+            <label <?=$colorClassText?>>1:
                 <input type="radio" name="radio" value="radio1">
             </label>
-            <label>2:
+            <label <?=$colorClassText?>>2:
                 <input type="radio" name="radio" value="radio2">
             </label>
-            <label>3:
+            <label <?=$colorClassText?>>3:
                 <input type="radio" name="radio" value="radio3"><br>
             </label>
             <input type="submit" value="Отправить">
@@ -43,12 +43,12 @@
 
     <form method="post">   
         <fieldset>
-            <legend>Задача 2. Дана форма для ввода логина и пароля. Необходимо вывести на экран имя пользователя, а пароль захешировать и сохранить его в массив _POST</legend>
-            <label>
+            <legend <?=$colorClassText?>>Задача 2. Дана форма для ввода логина и пароля. Необходимо вывести на экран имя пользователя, а пароль захешировать и сохранить его в массив _POST</legend>
+            <label <?=$colorClassText?>>
                 Логин:
                 <input type="text" name="login">
             </label><br>
-            <label>
+            <label <?=$colorClassText?>>
                 Пароль:
                 <input type="password" name="password">
             </label>
@@ -59,10 +59,10 @@
     
     <form method="post">   
         <fieldset>
-            <legend>Задача 3. Создать страницу для ввода имени пользователя (login) и пароля (passwd). 
+            <legend <?=$colorClassText?>>Задача 3. Создать страницу для ввода имени пользователя (login) и пароля (passwd). 
         Если пользователь вводит правильную пару (login/passwd), то сервер выдает страницу с сообщением, 
         что доступ к секретным страницам открыт. Login предлагается выбирать из списка.</legend>
-            <label>
+            <label <?=$colorClassText?>>
                 Логин:
             <select type="combobox" name="login">
                 <option value="name111">111</option>
@@ -70,7 +70,7 @@
                 <option value="name222">222</option>
             </select>
             </label><br>
-            <label>
+            <label <?=$colorClassText?>>
                 Пароль:
                 <input type="password" name="passwd">
             </label>
@@ -79,8 +79,8 @@
     </form>
     <form method="get">   
         <fieldset>
-            <legend>Задача 4. Создайте форму генерации ссылки с параметром</legend>
-            <select name="l">
+            <legend <?=$colorClassText?>>Задача 4. Создайте форму генерации ссылки с параметром</legend>
+            <select name="l" <?=$colorClassText?>>
                 <option value="1">Лаб1</option>
                 <option value="2">Лаб2</option>
                 <option value="3">Лаб3</option>
@@ -127,7 +127,7 @@
         $password = (isset($_POST["passwd"])? $_POST["passwd"] : "");
         $loginRight = 0;
         $passwordRight = "11111";
-        if ($loginRight == $loginRight && $password == $passwordRight)
+        if ($login == $loginRight && $password == $passwordRight)
         {
             echo "$login: Доступ открыт";
         }
