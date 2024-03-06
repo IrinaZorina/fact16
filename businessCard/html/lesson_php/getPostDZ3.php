@@ -1,18 +1,19 @@
+<?
+session_start();
+include "../inc/getPostdz/functions.php";
+// print_r($_SESSION);
+// print_r($_COOKIE);
+?>
 <!DOCTYPE html>
 <html lang="en">
-  <!-- // Создать страницу для ввода имени пользователя (login) и пароля (password). Если пользователь вводит правильную пару (login/password), то сервер выдает страницу с сообщением, что доступ к секретным страницам открыт. Login предлагается выбирать из списка. 
-  
-  Создайте форму генерации ссылки с параметром:
-  Создайте форму и в ней добавьте поле со списком выбора – Лаб1, Лаб2, Лаб3, Лаб4
-  При нажатии на кнопку должно быть сформирована ссылка следующего вида: phpcourse.php?l=3 , где 3 – это номер выбранной лабораторной работы.
-  
-  Слайд 16 Создайте анкету на форме.
+  <!-- 
+  К задаче с авторизацией добавить две страницы (fact.php, bitrix.php).
 -->
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>getPostDZ3</title>
+  <title>GetPostDZ3</title>
   <link rel="stylesheet" href="../../assets/style/style.css" />
   <? require "../inc/inc_font/linkFont.php"; ?>
 </head>
@@ -20,7 +21,7 @@
 
 <body>
   <div class="container">
-    <? include "../inc/getPostdz/inPHP.php" ?>
+    <? loginAndPassword() ?>
     <form action="getPostDZ3.php" method="post">
       <label>Login:</label><br>
       <p><input type="radio" name="user" value="admin"> admin</p>
@@ -30,6 +31,7 @@
       <input type="password" name="pass" value="admin"><br>
       <button type="submit" name="login" value="login">Log in</button><br>
     </form>
+	<p><?= pageLast()?></p>
   </div>
 </body>
 <? require "../inc/inc_lk_F_H/footer.php"; ?>

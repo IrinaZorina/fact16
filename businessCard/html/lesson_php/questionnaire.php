@@ -1,3 +1,11 @@
+<?
+session_start();
+$last = isset($_SERVER['REQUEST_URI']) ? $_SERVER['REQUEST_URI'] : "";
+setcookie('lastPage', $last, time() + 3600);
+include "../inc/getPostdz/functions.php";
+countQuestion();
+logOut();
+?>
 <!DOCTYPE html>
 <html lang="en">
   
@@ -12,7 +20,6 @@
   
   <body>
     <div class="container">
-    <? require "../inc/getPostdz/questionPHP.php"?>
     <h1>Анкета</h1>
     <form action="questionnaire.php" method="post">
 
