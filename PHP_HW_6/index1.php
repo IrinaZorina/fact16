@@ -1,7 +1,23 @@
 <?php
-$loginForm = isset($_GET['login'])? $_GET['login'] : "";
-setcookie('login', $loginForm, time()+3600);
-setcookie('time', date("H:i:s"), time()+3600);
+$output = $login = $lastVisit = "";
+$dateTime = (new DateTimeImmutable("Asia/Yekaterinburg"))->format('c');
+$expire = time() + 3600;
+
+if (isset(
+  $_POST['submit'],
+  $_POST['login']
+)) {
+  setcookie('login', $_POST['login'], $expire);
+  setcookie('last-visit', $dateTime, $expire);
+
+  if (isset(
+    $_COOKIE['login'],
+  )) {
+    $login = $_COOKIE['login'];
+    $lastVisit = $_COOKIE['last-visit'];
+  }
+  $output = "Пользователь - $login, последний визит - $lastVisit";
+}
 
 ?>
 <!doctype html>
@@ -16,15 +32,13 @@ setcookie('time', date("H:i:s"), time()+3600);
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-    <h1>
-        Логин посетителя: <?=isset($_GET['login'])? $_GET['login'] : "" ?><br>
-        Время посетителя: <?=$_COOKIE['time']?><br>
-    </h1>
-    <form>
-        <label> Логин:
-            <input type="text" name="login" value=>
-        </label><br>
-        <input type="submit"><br>
+    <form action=<?= $_SERVER['PHP_SELF'] ?> method="POST">
+        <p>
+            <label for="login">Логин:</label>
+            <input type="text" id="login" name="login">
+        </p>
+        <input type="submit" name="submit" value="Отправить">
     </form>
+    <?= $output ?>
 </body>
 </html>

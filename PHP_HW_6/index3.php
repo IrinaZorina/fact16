@@ -1,12 +1,11 @@
 <?php
-if(!isset($_SESSION)){
-    session_start();
-}
-if(!isset($_SESSION['time']) && isset($_SESSION)){
-    $_SESSION['time'] = date("H:i:s");
-} else{
-    echo date("H:i:s");
-}
+session_start();
+if (!isset($_SESSION['login_time'])) {
+    $_SESSION['login_time'] = time();
+  }
+  
+  $lastVisited = (new DateTimeImmutable("Asia/Yekaterinburg"))->setTimestamp($_SESSION['login_time'])->format("d-m-Y H:i:s");
+  $timeSincePreviousLogin = time() - $_SESSION['login_time'];
 
 ?>
 <!doctype html>
@@ -21,6 +20,6 @@ if(!isset($_SESSION['time']) && isset($_SESSION)){
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-    <h1>Время: <?=date("H:i:s") ?></h1>
+    <h1>Время: <?=$lastVisited ?></h1>
 </body>
 </html>
