@@ -18,5 +18,7 @@
         <nav>
             <a href="table.php">Таблица</a>
             <a href="tasks.php">Задачи</a>
+            <a href="get_post.php">POST</a>
+            <a href="anketa.php">Анкета</a>
         </nav>
 </header>

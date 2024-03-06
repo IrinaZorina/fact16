@@ -7,19 +7,6 @@
     <link rel="stylesheet" href="assets/styles/style.css">
 </head>
 <body>
-    <?php
-        $time = date('H:i');
-        if($time >= 8.00 && $time < 20.00){
-            $color = "#FFD700";
-        }else {
-            $color = "#A9A9A9";
-        }
-    ?>
-    <style>
-        .profile_container, .row_container {
-            background-color: <?php echo $color; ?>;
-        }
-    </style>
     <?php require_once 'inc/header.php' ?>
     <main>
         <div class="profile_container">
