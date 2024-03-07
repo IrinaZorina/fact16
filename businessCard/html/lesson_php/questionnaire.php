@@ -82,8 +82,9 @@ logOut();
       <input type="radio" name="yesNo19" value="yes" checked>Yes
       <input type="radio" name="yesNo19" value="no">No
       <hr>
-      <input type="submit" value="submit">
-      <input type="reset" value="reset">
+      <input type="submit" name="submit" value="submit">
+      <input type="submit" name="reset" value="reset">
+      <input type="submit" name="logout" value="logout">
       <a id="myLink" href="select.php">Select</a>
     </form>
   </div>

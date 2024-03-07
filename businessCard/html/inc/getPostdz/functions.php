@@ -37,6 +37,8 @@ function pageLast()
 
   if (!empty($_COOKIE['lastPage'])) {
   $last = $_COOKIE['lastPage'];
+  $last = array_pop(explode("/", $last));
+  //var_dump($last);
     echo "Вы были на странице $last.";
   }
 
