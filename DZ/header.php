@@ -27,13 +27,12 @@
             <a <?php echo $colorClassText ?> href="array.php" target="_self">Массивы</a>
             <a <?php echo $colorClassText ?> href="string.php" target="_self">Строки</a>
             <a <?php echo $colorClassText ?> href="functionPage.php" target="_self">Функции</a>
-            <a <?php echo $colorClassText ?> href="simulations.php" target="_self">Моделирование</a>
-            <a <?php echo $colorClassText ?> href="taskFunction.php" target="_self">Задачи на функции</a>
-            <a <?php echo $colorClassText ?> href="taskString.php" target="_self">Задачи на строки</a>
             <a <?php echo $colorClassText ?> href="getPost0.php" target="_self">Задания по теме Get/Post. Слайд 15</a>
             <a <?php echo $colorClassText ?> href="getPost1.php" target="_self">Задания по теме Get/Post. Слайд 16</a>
             <a <?php echo $colorClassText ?> href="fact.php" target="_self">fact</a>
             <a <?php echo $colorClassText ?> href="bitrix.php" target="_self">bitrix</a>
+            <a <?php echo $colorClassText ?> href="file.php" target="_self">Файлы</a>
+            <a <?php echo $colorClassText ?> href="additionalTask.php" target="_self">Дополнительные задачи</a>
         </nav>
     </header>
 </body>
