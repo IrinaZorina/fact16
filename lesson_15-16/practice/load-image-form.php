@@ -6,7 +6,7 @@ if (!empty($_FILES)) {
 
   for ($i = 0; $i < count($_FILES['files']['name']); $i++) {
     move_uploaded_file($_FILES['files']['tmp_name'][$i], "./images/" .
-      (new DateTimeImmutable("Asia/Yekaterinburg"))->setTimestamp(time())->format("d-m-Y_H-i-s_") .
+      (new DateTimeImmutable("Asia/Yekaterinburg"))->format("d-m-Y_H-i-s_") .
       $_FILES['files']['name'][$i]);
   }
 }
