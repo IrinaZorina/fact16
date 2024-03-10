@@ -1,3 +1,6 @@
+<?
+                session_start();
+?>
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -11,7 +14,7 @@
     <div class="wraper">
     <header class="header">
     <a href="index.php">
-            <img class="logo" src="img/logo.png" alt="logo">
+            <img class="logo" src="./img/logo.png" alt="logo">
         </a>
         <nav class="menu">
             <ul class="top_menu">
@@ -31,11 +34,17 @@
                 <li class="top_menu-item"><a href="get-post.php">GET/POST</a></li>
             </ul>
         </nav>
+        <nav class="menu">
+            <ul class="top_menu">
+                <li class="top_menu-item"><a href="c-s.php">COOKIE/SESSION</a></li>
+                <li class="top_menu-item"><a href="files.php">Файлы</a></li>
+            </ul>
+        </nav>
        <? $date = date("H");
 if($date >= 20 || $date <= 8)
-$img = "/img/tfone3.jpg";
+$img = "./img/tfone3.jpg";
 else
-$img = "/img/fone.jpg";
+$img = "./img/fone.jpg";
 ?>
 <style>
     body {

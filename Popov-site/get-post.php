@@ -101,6 +101,7 @@
                 <p>
                 <h2>Анкета для друга</h2>
     <form method="post" action="">
+    <div class="color">
         <label for=""> Ваше имя:
             <input type="text" name="name">
         </label> <br><br>
@@ -125,7 +126,7 @@
         Вам нравится танцевать?: <br> <input type="radio" name="q19" value="yes" checked>Да <input type="radio" name="q19" value="no">Нет<br>
         Любите ли вы ходить в театр?: <br> <input type="radio" name="q20" value="yes" checked>Да <input type="radio" name="q20" value="no">Нет<br>
         Хотели бы вы изучить новую профессию?: <br> <input type="radio" name="q21" value="yes" checked>Да <input type="radio" name="q21" value="no">Нет<br>
-
+        </div>
         <input type="submit" name="submit" value="Отправить">
     </form>
     <?
