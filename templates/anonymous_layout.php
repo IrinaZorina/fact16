@@ -11,6 +11,24 @@
     <link rel="stylesheet" href="<?= $css_file ?>">
     <link rel="stylesheet" href="/assets/css/table-styles.css">
     <title>Аков Артур</title>
+    <style>
+        .registration-offer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 18px;
+            color: #555;
+        }
+
+        .registration-offer a {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .registration-offer a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
 
@@ -23,32 +41,15 @@
     <div class="header__menu">
         <nav>
             <ul>
-                <li><a href="index.php">Главная</a></li>
-                <li><a href="table.php">Периодическая таблица</a></li>
-                <li><a href="page_with_pictures_flex_grid.php">Кошачьи породы</a></li>
-                <li><a href="cycles.php">Циклы</a></li>
-                <li><a href="arrays.php">Массивы</a></li>
-                <li><a href="strings.php">Строки</a></li>
-                <li><a href="functions.php">Функции</a></li>
-                <li><a href="questionnaires.php">Анкета</a></li>
-                <!-- Пункт выхода -->
-                <?php if ($is_logged_in): ?>
-                    <li><a href="logout.php">Выход</a></li>
-                <?php endif; ?>
-                <!-- Другие пункты меню, если есть -->
+                <li><a href="login.php">Войти</a></li>
+                <!-- Оригинальное предложение регистрации -->
+                <li class="registration-offer">Еще не со мной? <a href="register.php">Присоединяйся ко мне!</a></li>
             </ul>
         </nav>
     </div>
 </header>
 
 <!-- Main Content -->
-<div class="welcome-message">
-    <?php if ($is_logged_in): ?>
-        <p>Добро пожаловать, <?= $_SESSION['username'] ?>!</p>
-    <?php else: ?>
-        <p>Добро пожаловать!</p>
-    <?php endif; ?>
-</div>
 <?= $content; ?>
 <!-- Footer -->
 <footer class="footer">

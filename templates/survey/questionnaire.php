@@ -7,7 +7,7 @@
 </head>
 <body>
 <h2>Анкета</h2>
-<form action="process_form.php" method="post">
+<form action="processing_of_the_questionnaire.php" method="post">
     <label for="name">Имя:</label>
     <input type="text" name="name" id="name" required><br>
     <label for="q1">1. Вам нравится программирование на PHP?</label>
@@ -88,5 +88,6 @@
 
     <input type="submit" value="Отправить">
 </form>
+
 </body>
 </html>

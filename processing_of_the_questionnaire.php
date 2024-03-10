@@ -1,4 +1,5 @@
 <?php
+
 require_once('helpers.php');
 
 // Проверяем состояние пользователя
@@ -8,7 +9,7 @@ $is_logged_in = checkLoggedIn();
 $page_template = $is_logged_in ? "layout.php" : "anonymous_layout.php";
 
 // Рендерим страницу с нужным шаблоном
-$page_content = include_template("cycle.php");
+$page_content = include_template("survey/process_form.php");
 
 // Рендерим лейаут с контентом и переменной $is_logged_in
 $layout_content = include_template($page_template, [
@@ -19,4 +20,5 @@ $layout_content = include_template($page_template, [
 
 // Выводим содержимое макета на экран
 print $layout_content;
+
 

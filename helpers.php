@@ -34,5 +34,16 @@ function include_template($name, array $data = []) {
     return $result;
 }
 
+function checkLoggedIn() {
+    $is_logged_in = false; // Предположим, что пользователь не залогинен
 
+    // Если пользователь залогинен, меняем значение переменной $is_logged_in
+    // Например, если есть данные о пользователе в сессии
+    session_start();
+    if (isset($_SESSION['user_id'])) {
+        $is_logged_in = true;
+    }
+
+    return $is_logged_in;
+}
 
