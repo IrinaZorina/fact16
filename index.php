@@ -1,4 +1,5 @@
 <?php
+require_once('create_database.php');
 require_once('helpers.php');
 
 // Проверяем состояние пользователя
