@@ -62,3 +62,25 @@
     border: 2px solid;
     font-size: 50px;
 }
+
+@media screen and (max-width: 400px) {
+    
+    .header{
+        grid-template-columns: 1fr;
+    }
+    .containerh{
+        grid-template-columns: 1fr;
+    }
+    .container1{
+        grid-template-columns: 1fr;
+    }
+    .container2{
+        grid-template-columns: 1fr;
+    }
+    .container3{
+        grid-template-columns: 1fr;
+    }
+    .child{
+        grid-template-columns: 1fr;
+    }
+}
