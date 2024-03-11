@@ -11,7 +11,7 @@ $questions = [];
 $matchYes = [3, 9, 10, 13, 14, 19];
 $matchNo = [1, 2, 4, 5, 6, 7, 8, 11, 12, 15, 16, 17, 18];
 $questionsCount = $score = 0;
-$path = __DIR__ . "/data/questions.txt";
+$path = __DIR__ . "../data/questions.txt";
 
 $fd = fopen($path, 'r') or die("не удалось открыть файл");
 while (!feof($fd)) {
