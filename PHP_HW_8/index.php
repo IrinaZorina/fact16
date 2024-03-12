@@ -1,8 +1,3 @@
-<?php
-session_start();
-$login = $_SESSION ['name'];
-$password = $_SESSION ['password'];
-?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -15,6 +10,13 @@ $password = $_SESSION ['password'];
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-    <h1>Hello there, <?=$_SESSION?>!</h1>
+    <form action="create.php" method="post">
+        <label> Логин:
+            <input type="text" name="name">
+        </label><br>
+        <label> Возраст:
+            <input type="text" name="age">
+        <input type="submit"><br>
+    </form>
 </body>
 </html>
