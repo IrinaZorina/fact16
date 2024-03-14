@@ -62,6 +62,9 @@
     <?php else: ?>
         <p>Добро пожаловать!</p>
     <?php endif; ?>
+    <?php if (isset($_COOKIE['last_visited_page'])): ?>
+        <p>Последняя посещенная страница: <?= $_COOKIE['last_visited_page'] ?></p>
+    <?php endif; ?>
 </div>
 <?= $content; ?>
 <!-- Footer -->
