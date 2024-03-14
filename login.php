@@ -22,5 +22,9 @@ if (isset($_GET['error_message'])) {
     <input type="password" id="password" name="password" required><br><br>
     <button type="submit">Войти</button>
 </form>
+<!-- Кнопка для перехода на главную страницу -->
+<a href="index.php"><button>На главную</button></a>
+<!-- Кнопка для перехода на страницу регистрации -->
+<a href="register.php"><button>Зарегистрироваться</button></a>
 </body>
 </html>

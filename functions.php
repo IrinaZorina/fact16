@@ -1,6 +1,8 @@
 <?php
-
 require_once('helpers.php');
+
+// Сохраняем текущую страницу в куки как последнюю посещенную страницу
+setcookie('last_visited_page', $_SERVER['PHP_SELF'], time() + (86400 * 30), "/", "", true, true);
 
 // Проверяем состояние пользователя
 $is_logged_in = checkLoggedIn();
@@ -20,5 +22,4 @@ $layout_content = include_template($page_template, [
 
 // Выводим содержимое макета на экран
 print $layout_content;
-
-
+?>

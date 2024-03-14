@@ -17,7 +17,6 @@ $layout_content = include_template($page_template, [
     "css_file" => $css_file, // Передача переменной $css_file в шаблон layout.php
     "is_logged_in" => $is_logged_in, // Передача переменной $is_logged_in в шаблон layout.php
 ]);
-
 // Выводим содержимое макета на экран
 print $layout_content;
 

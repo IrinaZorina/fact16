@@ -12,8 +12,20 @@
     <link rel="stylesheet" href="/assets/css/table-styles.css">
     <title>Аков Артур</title>
 </head>
-<body>
-
+<body style="background-color:<?php echo isset($_COOKIE['background_color']) ? $_COOKIE['background_color'] : 'white'; ?>;">
+<!-- Форма выбора цвета фона -->
+<div class="color-picker">
+    <form action="set_color.php" method="post">
+        <label for="background-color">Выберите цвет фона:</label>
+        <select name="background-color" id="background-color">
+            <option value="white">Белый</option>
+            <option value="lightblue">Голубой</option>
+            <option value="lightgreen">Светло-зеленый</option>
+            <option value="lightpink">Светло-розовый</option>
+        </select>
+        <button type="submit">Установить цвет</button>
+    </form>
+</div>
 <!-- Header -->
 <header class="header">
     <div class="header__logo">
@@ -31,6 +43,8 @@
                 <li><a href="strings.php">Строки</a></li>
                 <li><a href="functions.php">Функции</a></li>
                 <li><a href="questionnaires.php">Анкета</a></li>
+                <li><a href="facts.php">Факт</a></li>
+                <li><a href="bitrixs.php">Битрикс</a></li>
                 <!-- Пункт выхода -->
                 <?php if ($is_logged_in): ?>
                     <li><a href="logout.php">Выход</a></li>
