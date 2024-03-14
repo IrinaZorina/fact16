@@ -3,33 +3,44 @@ require_once 'dbconn.php';
 
 $mysqli = DB::getInstance();
 
-// Передача
-
 if (isset($_POST['submit'])) {
   $name = $mysqli->real_escape_string($_POST['customer-name']);
   $age = intval($mysqli->real_escape_string($_POST['age']));
   $city = isset($_POST['city_id']) ? intval($mysqli->real_escape_string($_POST['city_id'])) : 9999;
 
+// Передача
+
   $insert = $mysqli->prepare("INSERT INTO persons (name, age, city_id) VALUES (?, ?, ?)");
   $insert->bind_param("sii", $name, $age, $city);
   $insert->execute();
   $mysqli->close();
-
   echo "Данные переданы.";
 }
 
 // Получение
 
-// $select = $mysqli->query("SELECT * FROM persons");
-// $table = $select->fetch_all(MYSQLI_ASSOC);
-// $mysqli->close();
+$name = 'Tom';
+$select = $mysqli->prepare("SELECT name, age FROM persons WHERE name = ?");
+$select->bind_param('s', $name);
+$select->execute();
+$select->bind_result($name, $age);
 
-// $output = array_map(fn ($tuple) => print_r(
-//   $tuple['id'] . " " .
-//   $tuple['name'] . " " .
-//   $tuple['age'] . " " .
-//   $tuple['city_id'] .
-//   "<br>"), $table);
+
+while($select->fetch()) {
+  echo $name . "(" . $age . ")<br>";
+}
+
+$mysqli->close();
+
+// Апдейт
+
+$name = 'Loo';
+$id = 1;
+
+$insert = $mysqli->prepare("UPDATE peoples SET name = ? WHERE id = ?");
+$insert->bind_param("si", $name, $id);
+$insert->execute();
+$mysqli->close();
 ?>
 
 <!DOCTYPE html>
@@ -39,6 +50,11 @@ if (isset($_POST['submit'])) {
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <style>
+    form {
+      display: none; /* Закомментировать чтобы появилась форма для передачи */
+    }
+  </style>
 </head>
 
 <body>

@@ -6,7 +6,7 @@ class DB
     $host = 'localhost';
     $user = 'root';
     $password = '';
-    $db = 'lesson_17_18';
+    $db = 'project2';
     $port = '3306';
 
     $driver = new mysqli_driver();

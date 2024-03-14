@@ -2,14 +2,10 @@ DROP DATABASE IF EXISTS lesson_17_18;
 CREATE DATABASE lesson_17_18;
 USE lesson_17_18;
 
-CREATE TABLE lesson_17_18.persons (
+CREATE TABLE persons (
     id serial PRIMARY KEY,
     name varchar(32),
     age int 
-    -- city_id int(11),
-    -- FOREIGN KEY (city_id)
-    --     REFERENCES cities(id)
-    --     ON DELETE CASCADE
 ) ENGINE=INNODB;
 
 INSERT INTO persons (name, age) values ('Tom', 10);
@@ -17,7 +13,7 @@ INSERT INTO persons (name, age) values ('Bob', 11);
 INSERT INTO persons (name, age) values ('Smith', 12);
 INSERT INTO persons (name, age) values ('Anna', 14);
 
-CREATE TABLE lesson_17_18.cities (
+CREATE TABLE cities (
     id serial PRIMARY KEY,
     city varchar(30)
 ) ENGINE=INNODB;
