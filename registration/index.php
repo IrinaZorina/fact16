@@ -1,13 +1,6 @@
 <?php
-$login = 'denis';
-$pass = 'qwerty';
-
-if($_POST['username'] == $login && md5($_POST['password']) == md5($pass)){
-    $hello = '/registration/hello.php';
-}else{
-    echo 'Логин и пароль не верны';
-}
-
+session_start();
+$last_page = isset($_SESSION['last_page']) ? $_SESSION['last_page'] : 'Вы ещё не посещяли других страниц';
 ?>
 
 <!DOCTYPE html>
@@ -34,5 +27,28 @@ if($_POST['username'] == $login && md5($_POST['password']) == md5($pass)){
         <br><br>
         <button type="submit">Отправить</button>
     </form>
+    <br><br>
+    <a href="../index.php">На главную</a>
+    <br><br>
 </body>
 </html>
+
+<?php
+$correct_login = 'denis';
+$correct_password = 'qwerty';
+
+if (isset($_POST['username']) && isset($_POST['password'])) {
+    $login = $_POST['username'];
+    $password = $_POST['password'];
+
+    if ($login === $correct_login && $password === $correct_password) {
+        echo '<a href="/registration/bitrix.php">BITRIX</a><br>';
+        echo '<a href="/registration/fact.php">FACT</a><br>';
+        echo '<br>';
+        echo 'Последний раз вы посещали: ' . $last_page;
+    } else {
+        echo 'неверные логин или пароль';
+    }
+}
+
+?>
