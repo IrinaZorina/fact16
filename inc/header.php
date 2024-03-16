@@ -20,5 +20,6 @@
             <a href="tasks.php">Задачи</a>
             <a href="get_post.php">POST</a>
             <a href="anketa.php">Анкета</a>
+            <a href="/registration/index.php">Авторизация</a>
         </nav>
 </header>
