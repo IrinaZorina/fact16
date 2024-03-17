@@ -24,7 +24,7 @@
     <br><br>
 </body>
 </html>
-<?
+<?php
 if (!isset($_POST["login"]) || !isset($_POST["password"])) return;
 $login = $_POST["login"];
 $password = $_POST["password"];
