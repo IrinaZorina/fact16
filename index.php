@@ -30,7 +30,7 @@ $login = $_POST["login"];
 $password = $_POST["password"];
 $hostname = 'localhost';
 $username = 'BrutalRaynor';
-$passwd = 'Brutal2077';
+$password = 'Brutal2077';
 $dbname = 'loginpassword';
 
 $connect = new mysqli($hostname, $username, $passwd, $dbname);
