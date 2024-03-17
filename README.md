@@ -15,3 +15,15 @@
 [Task4_Slide15](HomeworkGetPost/Task4SL15.php)
 
 [Task3_Slide16](HomeworkGetPost/Task3SL16.php)
+
+# SQL
+
+[Tasks_from_sqlAcadem](HomeworkSQL/SQLHomeworkTask.md)
+
+[Task](HomeworkSQL/SQLHomework.php)
+
+# Files
+
+[Task4_Slide12](HomeworkFiles/NewTextNORepeat.php)
+
+[Task5_Slide12](HomeworkFiles/NewTextOnlyRepeat.php)
