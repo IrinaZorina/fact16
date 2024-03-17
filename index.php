@@ -33,7 +33,7 @@ $username = 'BrutalRaynor';
 $password = 'Brutal2077';
 $dbname = 'loginpassword';
 
-$connect = new mysqli($hostname, $username, $passwd, $dbname);
+$connect = new mysqli($hostname, $username, $password, $dbname);
 $connect->set_charset('utf8');
 $authorization = 'SELECT login, passwd FROM users WHERE (login LIKE ? AND passwd LIKE ?';
 $stmt->bind_param('ss', $login, $passwd);
