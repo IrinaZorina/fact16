@@ -1,61 +1,47 @@
-<?php
-//$str = fopen('read.txt','r');
-//echo $str;
-//echo "<br>";
-//$str2 = fread($str, 1);
-//echo $str2;
-//echo "<br>";
-//while ($str2 != null){
-  //$str2 = fread($str, 1);
-  //echo $str2;
-  //if($str2 == "\n" ||$str2 == "\r"){
-    //continue;
-  //}
-  //echo "<br>";
-//}
-//$str = file('read.txt');
-//print_r($str);
-//echo "<br>";
-//$str2 = file_get_contents('read.txt');
-//echo $str2;
-//echo "<br>";
-//$str2 .= "!!!";
-//$str2 = file_put_contents('read.txt', $str2);
-//echo "<pre>";
-//var_dump($_FILES);
-//echo "</pre>";
-//move_uploaded_file($_FILES["avatar"]["tmp_name"], __DIR__ . "/upload/" . $_FILES["avatar"]["name"]);
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="keywords" contents="html, css, information">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <form method="POST">
+        <label for="login">Логин:
+            <input type="text" id="login" name="login">
+        </label><br><br>
+        <label for="password"> Пароль:
+            <input type="text" id="password" name="password">
+        </label><br><br>
+        <input type="submit" name="submit" value="Войти">
+    </form>
+    <br><br>
+    <a href="site/index.html">На главную</a>
+    <br><br>
+</body>
+</html>
+<?
+if (!isset($_POST["login"]) || !isset($_POST["password"])) return;
+$login = $_POST["login"];
+$password = $_POST["password"];
 $hostname = 'localhost';
 $username = 'BrutalRaynor';
-$password = 'Brutal2077';
-$dbname = 'project';
+$passwd = 'Brutal2077';
+$dbname = 'loginpassword';
 
-$connect = mysqli_connect($hostname, $username, $password, $dbname);
-//echo '<pre>';
-//var_dump($connect);
-//echo '</pre>';
-mysqli_set_charset($connect, 'utf8');
-$sql = mysqli_query($connect, 'SELECT * FROM person');
-$arr = mysqli_fetch_all($sql, MYSQLI_ASSOC);
-foreach ($arr as $key => $value){
-  echo $value['name'] . "<br>";
+$connect = new mysqli($hostname, $username, $passwd, $dbname);
+$connect->set_charset('utf8');
+$authorization = 'SELECT login, passwd FROM users WHERE (login LIKE ? AND passwd LIKE ?';
+$stmt->bind_param('ss', $login, $passwd);
+$stmt->execute();
+$stmt->result($login, $passwd);
+if ($stmt->fetch()){
+    header("Location: site/index.html");
+} else {
+    echo "Вход не выполнен! Проверьте корректность введенных данных";
 }
-$sql = mysqli_query($connect, 'INSERT INTO person (name, age) VALUES ("Josh", 28)');
-echo '<pre>';
-print_r($arr);
-echo '</pre>';
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+?>
