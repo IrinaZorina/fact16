@@ -15,7 +15,7 @@
             <input type="text" id="login" name="login">
         </label><br><br>
         <label for="password"> Пароль:
-            <input type="text" id="password" name="password">
+            <input type="text" id="passwd" name="passwd">
         </label><br><br>
         <input type="submit" name="submit" value="Войти">
     </form>
@@ -27,7 +27,7 @@
 <?php
 if (!isset($_POST["login"]) || !isset($_POST["password"])) return;
 $login = $_POST["login"];
-$password = $_POST["password"];
+$passwd = $_POST["passwd"];
 $hostname = 'localhost';
 $username = 'BrutalRaynor';
 $password = 'Brutal2077';
@@ -42,6 +42,6 @@ $stmt->result($login, $passwd);
 if ($stmt->fetch()){
     header("Location: site/index.html");
 } else {
-    echo "Вход не выполнен! Проверьте корректность введенных данных";
+    echo "Проверьте корректность введенных данных";
 }
 ?>
