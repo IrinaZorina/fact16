@@ -48,6 +48,9 @@
 				</ul>
 			</div>
 		</div>
+		<form action="/html/inc/actions/logout.php" method="post">
+		<button href="" role="button">Выход из аккаунта</button>
+		</form>
 	</section>
 </main>
 <?php require "inc/inc_lk_F_H/footer.php"; ?>
