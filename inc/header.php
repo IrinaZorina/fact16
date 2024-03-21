@@ -12,14 +12,15 @@
             background-color: <?php echo $color; ?>;
         }
     </style>
-        <div class="head">
-            <div class="logo"><img class="header_icon" src="assets/img/businessCard/header_icon.png" alt="icon"></div>
-        </div>
-        <nav>
-            <a href="table.php">Таблица</a>
-            <a href="tasks.php">Задачи</a>
-            <a href="get_post.php">POST</a>
-            <a href="anketa.php">Анкета</a>
-            <a href="/registration/index.php">Авторизация</a>
-        </nav>
+    <div class="head">
+        <div class="logo"><img class="header_icon" src="assets/img/businessCard/header_icon.png" alt="icon"></div>
+    </div>
+    <nav>
+        <a href="table.php">Таблица</a>
+        <a href="tasks.php">Задачи</a>
+        <a href="get_post.php">POST</a>
+        <a href="anketa.php">Анкета</a>
+        <a href="/registration/index.php">Авторизация</a>
+        <a href="/background_color/index.php">Цвет  фона</a>
+    </nav>
 </header>
