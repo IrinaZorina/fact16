@@ -42,4 +42,4 @@ mysqli_close($con);
 
 header("Location: login.php?error_message=" . urlencode($error_message));
 exit();
-?>
+
